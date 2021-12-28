@@ -238,7 +238,7 @@ function setupExpress() {
 }
 
 function setupSocketIO(server) {
-  api.socketio = require("socket.io").listen(server);
+  api.socketio = require("socket.io")(server);
 
   // Add sockets
   api.socketio.on("connection", () => {

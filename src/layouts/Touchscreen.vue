@@ -1,5 +1,5 @@
 <template lang="html">
-  <div data-name="Touchscreen">
+  <div data-name="touch-screen">
     <TouchscreenBackgroundCoverArt
       v-if="
         show_cover_background === true &&
@@ -14,7 +14,7 @@
       v-if="ui.show_zone_select === true || current_zone_id === ''"
     />
     <TouchscreenOverlaySettings v-if="ui.show_settings === true" />
-    <template v-if="this.$route.name === 'Touchscreen'">
+    <template v-if="this.$route.name === 'touch-screen'">
       <div class="touchscreen_view_controls">
         <TouchscreenControlsViews />
         <TouchscreenControlsOverlays />
@@ -37,7 +37,7 @@ import TouchscreenControlsViews from "@/components/TouchscreenControlsViews.vue"
 import TouchscreenControlsOverlays from "@/components/TouchscreenControlsOverlays.vue";
 
 export default {
-  name: "Touchscreen",
+  name: "touch-screen",
   data: function () {
     return {
       transition_name: "",
